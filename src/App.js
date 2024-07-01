@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import { useSelector } from "react-redux";
+import "./App.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Homepage from "./screens/Homepage";
+import Products from "./screens/Products";
+import AboutUs from "./screens/AboutUs";
+import Cart from "./screens/Cart";
 
 function App() {
+  const { products } = useSelector((state) => state.productData);
+  console.log(products);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="w-screen h-screen">
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Homepage />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/" element={<AboutUs />} />
+          <Route path="/" element={<Cart />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
