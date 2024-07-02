@@ -2,4 +2,13 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Inter", sans-serif;
+}
+
+.product__carousel:hover .product__card--addtocart {
+  display: flex;
+}
+
+.product__card--addtocart {
+  display: none;
 }
