@@ -4,10 +4,33 @@ import { Heart } from "lucide-react";
 import { ShoppingBag } from "lucide-react";
 import { User } from "lucide-react";
 import { Search } from "lucide-react";
+import { useEffect } from "react";
 
 const Navbar = () => {
+  useEffect(() => {
+    const navbar = document.querySelector(".navbar");
+    const mainContent = document.querySelector(".main-content");
+    const top = navbar.offsetTop;
+
+    const stickynavbar = () => {
+      if (window.scrollY >= top) {
+        navbar.classList.add("sticky");
+        mainContent.style.paddingTop = `${navbar.offsetHeight}px`;
+      } else {
+        navbar.classList.remove("sticky");
+        mainContent.style.paddingTop = "0";
+      }
+    };
+
+    window.addEventListener("scroll", stickynavbar);
+
+    return () => {
+      window.removeEventListener("scroll", stickynavbar);
+    };
+  }, []);
+
   return (
-    <div className="logo w-full h-16 flex justify-between items-center  shadow-md pl-24 pr-24">
+    <div className="navbar w-full h-16 flex justify-between items-center shadow-md pl-24 pr-24">
       <div className="">
         <img src={logo} alt="shopnexus__logo" className=" h-10 w-10" />
       </div>

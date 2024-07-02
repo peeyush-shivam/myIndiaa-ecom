@@ -12,8 +12,6 @@ const FlashSale = () => {
     flashSaleProducts();
   }, []);
 
-  console.log(flashSale);
-
   const flashSaleProducts = async () => {
     try {
       const response = await axios.get(FLASHPRODUCTs);
@@ -24,7 +22,14 @@ const FlashSale = () => {
   };
   return (
     <div className=" w-full h-fit">
-      <SaleSlider products={flashSale} />
+      <SaleSlider
+        products={flashSale}
+        tag="Today's"
+        title="Flash Sale"
+        counter={true}
+        showDiscount={true}
+      />
+      <div className="flex-grow border-t border-primary-200 opacity-30 mt-16 mb-16"></div>
     </div>
   );
 };

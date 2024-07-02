@@ -12,7 +12,7 @@ const LandingPage = () => {
           <Navbar />
         </nav>
       </header>
-      <main className="w-full h-fit pl-24 pr-24">
+      <main className="main-content w-full h-fit pl-24 pr-24">
         <Outlet />
       </main>
       <footer>

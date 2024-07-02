@@ -56,7 +56,7 @@ const SaleCounter = () => {
   }, []);
 
   return (
-    <div className="flex justify-center items-end gap-2">
+    <div className="flex justify-center items-end gap-2 text-secondary-300">
       <div className="flex flex-col">
         <label className=" text-xs font-normal">Days</label>
         <span>{String(counter.days).padStart(2, "0")}</span>

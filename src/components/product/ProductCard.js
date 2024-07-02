@@ -2,7 +2,7 @@ import { Rating } from "@mui/material";
 import { imageData } from "../../utils/productsURL";
 import ProductCarousel from "./ProductCarousel";
 
-const ProductCard = ({ product }) => {
+const ProductCard = ({ product, showDiscount }) => {
   return (
     <div className="product__card h-fit w-fit relative">
       <div className="product__card--image h-60 w-60 bg-secondary-100 rounded-md overflow-hidden">
@@ -12,6 +12,7 @@ const ProductCard = ({ product }) => {
           autoplay={false}
           fit="contain"
           discount={product?.discountPercentage}
+          showDiscount={showDiscount}
         />
       </div>
       <div className="product__card--details h-20 w-60 text-sm pt-2">
