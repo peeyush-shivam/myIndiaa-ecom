@@ -30,3 +30,11 @@
 .product__card--addtocart {
   display: none;
 }
+
+.slider {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.slider::-webkit-scrollbar {
+  display: none;
+}

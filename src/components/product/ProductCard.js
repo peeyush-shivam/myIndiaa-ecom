@@ -1,16 +1,19 @@
 import { Rating } from "@mui/material";
-import { imageData } from "../../utils/productsURL";
 import ProductCarousel from "./ProductCarousel";
+import React from "react";
+
+const MemoizedProductCarousel = React.memo(ProductCarousel);
 
 const ProductCard = ({ product, showDiscount }) => {
   return (
     <div className="product__card h-fit w-fit relative">
       <div className="product__card--image h-60 w-60 bg-secondary-100 rounded-md overflow-hidden">
-        <ProductCarousel
+        <MemoizedProductCarousel
           images={product?.images}
           controls={product?.images.length > 1}
           autoplay={false}
-          fit="contain"
+          fit="cover"
+          product={product}
           discount={product?.discountPercentage}
           showDiscount={showDiscount}
         />
