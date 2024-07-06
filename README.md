@@ -65,7 +65,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/a
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
+`npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
@@ -73,10 +73,10 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 Clone the repository to your local machine:
 
-### `git clone https://github.com/your-username/e-commerce-app.git`
-### `cd e-commerce-app`
+### `git clone https://github.com/your-username/myIndiaa-ecom.git`
+### `cd myIndiaa-ecom`
 
-Components
+## Components
 
 1. ProductCard
 
@@ -176,6 +176,3 @@ Acknowledgements
 Contact
 
 For any questions or feedback, please reach out to:
-
-	•	Your Name: your-email@example.com
-	•	GitHub: https://github.com/your-username
