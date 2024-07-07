@@ -4,14 +4,6 @@
 
 Welcome to ShopNexus! This is a modern e-commerce platform built with React, designed to provide a smooth and engaging shopping experience. The application features product listings, category browsing, a carousel for featured products, and more. This project demonstrates advanced frontend development skills and incorporates best practices for building scalable web applications.
 
-## Features
-Product Listings: View products with images, descriptions, ratings, and prices.
-Product Carousel: Showcases featured products with autoplay and manual controls.
-Category Browsing: Explore products by different categories.
-Flash Sales and Best Sellers: Highlight special deals and top-selling products.
-Add to Cart and Wishlist: Manage cart items and save favorite products.
-Responsive Design: Adapts to various screen sizes for a seamless experience on both desktop and mobile devices.
-Service Workers: Caches images for offline access to improve performance.
 
 ## Table of Contents
 
@@ -23,6 +15,16 @@ Service Workers: Caches images for offline access to improve performance.
 - Contributing
 - Acknowledgements
 - Contact
+
+
+## Features
+- Product Listings: View products with images, descriptions, ratings, and prices.
+- Product Carousel: Showcases featured products with autoplay and manual controls.
+- Category Browsing: Explore products by different categories.
+- Flash Sales and Best Sellers: Highlight special deals and top-selling products.
+- Add to Cart and Wishlist: Manage cart items and save favorite products.
+- Responsive Design: Adapts to various screen sizes for a seamless experience on both desktop and mobile devices.
+- Service Workers: Caches images for offline access to improve performance.
 
 ## Installation
 
