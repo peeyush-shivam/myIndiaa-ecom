@@ -9,8 +9,8 @@ import { Link } from "react-router-dom";
 
 const Cart = () => {
   const [quantity, setQuantity] = useState({});
-  const dispatch = useDispatch();
   const { cart } = useSelector((state) => state.productData);
+  const dispatch = useDispatch();
 
   const headerTemplate = (header) => {
     return <div className="text-base pb-4 text-primary-200">{header}</div>;
@@ -70,6 +70,7 @@ const Cart = () => {
   };
 
   const computeTotals = () => {
+    // calculates all the totals of the cart
     let subtotal = cart.reduce(
       (acc, item) => acc + item.price * (quantity[item.id] || 1),
       0
@@ -122,8 +123,11 @@ const Cart = () => {
               body={subTotalBodyTemplate}
             ></Column>
           </DataTable>
-          <div className="cart__total flex justify-between items-start gap-2">
-            <div className="cart__coupon flex w-1/2 gap-2">
+
+          {/*** Cart UI ***/}
+
+          <div className="cart__total flex justify-between items-start gap-2 max-md:flex-col">
+            <div className="cart__coupon flex w-1/2 gap-2 max-md:w-full">
               <input
                 type="text"
                 className="text-text-200 border-text-200 rounded-sm border focus:outline-none placeholder:text-sm p-2"
@@ -133,7 +137,7 @@ const Cart = () => {
                 Apply Coupon
               </button>
             </div>
-            <div className="cart__price w-1/2 border-text-200 rounded-sm border p-3 gap-2">
+            <div className="cart__price w-1/2 border-text-200 rounded-sm border p-3 gap-2 max-md:w-full">
               <div className="text-base font-semibold pb-2 text-primary-200">
                 <span>Cart Total</span>
               </div>
