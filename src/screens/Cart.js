@@ -22,7 +22,7 @@ const Cart = () => {
         <img
           src={cart?.images[0]}
           alt={cart?.title}
-          className="cart__product w-20 shadow-2 border-round"
+          className="cart__product w-20 h-24 shadow-2 border-round object-contain  "
         />
         <span className="text-sm">{cart?.title}</span>
         <CircleX
